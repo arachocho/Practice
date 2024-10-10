@@ -23,9 +23,10 @@ struct ContentView: View {
         VStack {
             Text(inputValue)
                 .frame(maxWidth: .infinity, alignment: .trailing)
-                .font(.system(size: 40))
+                .font(.system(size: 50))
+            
                 .padding()
-                .background(Color.gray.opacity(0.2))
+                .background(Color.cyan.opacity(0.2))
             
             ForEach(buttons, id: \.self) { row in
                 HStack {
@@ -35,9 +36,10 @@ struct ContentView: View {
                         }) {
                             Text(buttonChar)
                                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                                .font(.system(size: 20))
+                                .font(.system(size: 30))
                                 .foregroundStyle(buttonChar == "C" ? .red : .black)
-                                .border(Color.gray, width: 1)
+                                .border(Color.cyan, width: 1)
+                                .cornerRadius(3)
                     }
                 }
             }
